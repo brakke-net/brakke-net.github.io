@@ -1,1 +1,68 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is a title</title>
+</head>
+
+<body>
+    <div>
+        <p>Hello world!</p>
+    </div>
+    <script type="text/turtle">
+        @base <https://brakke.net/> .
+        @prefix ex: <http://example.org/> . 
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix github: <brakke-net.github.io/#> .
+        @prefix owl: <http://www.w3.org/2002/07/owl#> .
+        @prefix schema: <http://schema.org/> .
+        @prefix wd: <http://www.wikidata.org/entity/> .
+        @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+        
+        <#nil> a foaf:Person;
+            foaf:name "Bram Ulrichts";
+            foaf:gender "male";
+            foaf:workplaceHomepage <https://vliz.be>;
+            foaf:based_near wd:Q1296;
+            foaf:depiction <https://avatars.githubusercontent.com/u/108867473>;
+            foaf:mbox <mailto:108867473+bulricht@users.noreply.github.com>;
+            foaf:homepage <>;
+            foaf:knows <https://users.ugent.be/~jcunhame/#me>;
+            foaf:knows <https://colada.be/#me>;
+            foaf:knows <https://razoreater.github.io/iam/#me>;
+            foaf:knows <https://jensdesutter.github.io/#me>;
+            foaf:knows <https://nicovervaeck.github.io/#me>;
+            foaf:knows <https://stijnoosterlinck.github.io/#me>;
+            foaf:knows _:b0;
+            owl:sameAs <#00000000-0000-0000-0000-000000000000>;
+            owl:sameAs github:00000000-0000-0000-0000-000000000000;
+            owl:sameAs github:nil;
+            owl:sameAs <https://mastodon.social/@brakke>;
+            schema:jobTitle "Open Science Developer";
+            schema:colleague <https://users.ugent.be/~jcunhame/#me>;
+            .
+
+        <#00000000-0000-0000-0000-000000000000> owl:sameAs <#nil> .
+
+        github:00000000-0000-0000-0000-000000000000 owl:sameAs <#nil> .
+
+        github:nil owl:sameAs <#nil> .
+
+        <https://users.ugent.be/~jcunhame/#me> a foaf:Person;
+            foaf:firstName "Jorge";
+            .
+        
+        _:b0 a foaf:Person;
+            foaf:firstName "Pieter";
+            .
+        
+        <https://pietercolpaert.be/teaching/kg/#2023-2024> a ex:Course;
+            ex:participant <#nil>;
+            ex:participant <https://users.ugent.be/~jcunhame/#me>;
+            ex:participant _:b0;
+            .
+ 
+    </script>
+</body>
+
+</html>
